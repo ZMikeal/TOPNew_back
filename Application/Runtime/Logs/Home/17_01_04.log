@@ -1,0 +1,948 @@
+[ 2017-01-04T09:07:44+08:00 ] 10.32.32.29 /topNew/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+
+[ 2017-01-04T09:07:44+08:00 ] 10.32.32.29 /topNew/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007123s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2017-01-04T09:07:52+08:00 ] 10.32.32.29 /topNew/Login/dologin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000699s ]
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `info_admin` WHERE `nickname` = 'cotbjhy' AND `password` = '14e1b600b1fd579f47433b88e8d85291' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `info_systime` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `info_systime` WHERE `id_employee` = 9999 AND `user_department` = 'COT部'  [ RunTime:0.0005s ]
+
+[ 2017-01-04T09:07:52+08:00 ] 10.32.32.29 /topNew/Plan/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000754s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanController.class.php 第 4 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022413s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000768s ]
+
+[ 2017-01-04T09:08:17+08:00 ] 10.32.32.29 /topNew/Plan/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanController.class.php 第 4 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016506s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016605s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000237s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000569s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000759s ]
+
+[ 2017-01-04T09:08:22+08:00 ] 10.32.32.29 /topNew/Login/loginout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+
+[ 2017-01-04T09:08:22+08:00 ] 10.32.32.29 /topNew/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006837s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000656s ]
+
+[ 2017-01-04T09:08:31+08:00 ] 10.32.32.29 /topNew/Login/dologin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `info_admin` WHERE `nickname` = 'cotbjhy' AND `password` = '14e1b600b1fd579f47433b88e8d85291' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `info_systime` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `info_systime` WHERE `id_employee` = 9999 AND `user_department` = 'COT部'  [ RunTime:0.0005s ]
+
+[ 2017-01-04T09:08:32+08:00 ] 10.32.32.29 /topNew/Plan/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanController.class.php 第 4 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016719s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000681s ]
+
+[ 2017-01-04T09:09:44+08:00 ] 10.32.32.29 /topNew/Login/loginout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+
+[ 2017-01-04T09:09:44+08:00 ] 10.32.32.29 /topNew/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000642s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007516s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007606s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000732s ]
+
+[ 2017-01-04T09:09:50+08:00 ] 10.32.32.29 /topNew/Login/dologin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `info_admin` WHERE `nickname` = 'cotbjhy' AND `password` = '14e1b600b1fd579f47433b88e8d85291' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-01-04T09:12:22+08:00 ] 10.32.32.29 /topNew/Login/dologin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `info_admin` WHERE `nickname` = 'cotbjhy' AND `password` = '14e1b600b1fd579f47433b88e8d85291' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-01-04T09:12:22+08:00 ] 10.32.32.29 /topNew/Planjhy/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014631s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000671s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000756s ]
+
+[ 2017-01-04T09:12:35+08:00 ] 10.32.32.29 /topNew/Planjhy/vse.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_item` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `info_item` WHERE `if_delete` = 0 AND `department` = 'COT部'  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `info_item` WHERE `if_delete` = 1 AND `department` = 'COT部'  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `info_project` [ RunTime:0.0008s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php on line 206 and defined /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1816 行.
+SQL: SELECT * FROM `info_project`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000275s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000435s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036975s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000534s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000912s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001046s ]
+
+[ 2017-01-04T09:12:39+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0026s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0026s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0026s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000258s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000373s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027462s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027575s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000739s ]
+
+[ 2017-01-04T09:13:03+08:00 ] 10.32.32.29 /topNew/Planjhy/usermod
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0018s ]
+NOTIC: [8] Undefined variable: tj /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 361 行.
+SQL: SELECT * FROM `info_admin` LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: validate /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: UPDATE `info_admin` SET `user_office`='其他',`user_job`='123',`id_level`='0' WHERE `id` = 8457 [ RunTime:0.0004s ]
+
+[ 2017-01-04T09:13:04+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0026s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0022s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000222s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000322s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000650s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2017-01-04T09:15:26+08:00 ] 10.32.32.29 /topNew/Planjhy/usermod
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000642s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0023s ]
+NOTIC: [8] Undefined variable: tj /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 361 行.
+SQL: SELECT * FROM `info_admin` LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: validate /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: UPDATE `info_admin` SET `user_office`='其他',`user_job`='123',`id_level`='7' WHERE `id` = 8457 [ RunTime:0.0005s ]
+
+[ 2017-01-04T09:15:28+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0038s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0033s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0035s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000355s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028870s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000786s ]
+
+[ 2017-01-04T09:15:45+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0028s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0022s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000217s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027307s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027421s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000691s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000798s ]
+
+[ 2017-01-04T09:15:48+08:00 ] 10.32.32.29 /topNew/Planjhy/usermod
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0016s ]
+NOTIC: [8] Undefined variable: tj /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 361 行.
+SQL: SELECT * FROM `info_admin` LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: validate /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: UPDATE `info_admin` SET `user_office`='其他',`user_job`='123' WHERE `id` = 8457 [ RunTime:0.0004s ]
+
+[ 2017-01-04T09:15:49+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0027s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027602s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2017-01-04T09:31:00+08:00 ] 10.32.32.29 /topNew/Planjhy/userform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `info_admin` WHERE ( id_employee=9999 ) LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2017-01-04T09:32:15+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0028s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0022s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000217s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000316s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027607s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000964s ]
+
+[ 2017-01-04T09:32:25+08:00 ] 10.32.32.29 /topNew/Planjhy/userform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `info_admin` WHERE ( id_employee=9999 and if_delete=0 ) LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2017-01-04T09:43:31+08:00 ] 10.32.32.29 /topNew/index/index2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015083s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2017-01-04T09:43:33+08:00 ] 10.32.32.29 /topNew/index/index2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014823s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000664s ]
+
+[ 2017-01-04T09:43:36+08:00 ] 10.32.32.29 /topNew/user/pass.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+NOTIC: [2048] Declaration of Home\Controller\UserController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/UserController.class.php 第 4 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000224s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000796s ]
+
+[ 2017-01-04T09:43:39+08:00 ] 10.32.32.29 /topNew/Planjhy/vse.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_item` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `info_item` WHERE `if_delete` = 0 AND `department` = 'COT部'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `info_item` WHERE `if_delete` = 1 AND `department` = 'COT部'  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `info_project` [ RunTime:0.0009s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php on line 206 and defined /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1816 行.
+SQL: SELECT * FROM `info_project`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000322s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026833s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000233s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000656s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2017-01-04T09:43:41+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0027s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0022s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000266s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000371s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028616s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000241s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+
+[ 2017-01-04T09:44:01+08:00 ] 10.32.32.29 /topNew/Planjhy/deleteuser?vid=8472
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0019s ]
+SQL: UPDATE `info_admin` SET `if_delete`='1' WHERE ( id=8472 ) [ RunTime:0.0005s ]
+
+[ 2017-01-04T09:44:03+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0028s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0022s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027470s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027569s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000716s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000804s ]
+
+[ 2017-01-04T09:48:02+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0031s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Template.class.php 第 527 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000256s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000360s ]
+
+[ 2017-01-04T09:48:18+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0027s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0021s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000274s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000386s ]
+NOTIC: [8] Undefined variable: 2 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 5 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 4 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 4 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 4 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 4 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+NOTIC: [8] Undefined variable: 3 /home/wwwroot/default/topNew/Application/Runtime/Cache/Home/f71ad6796f51114a57907bb1f0bbf229.php 第 308 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000606s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000691s ]
+
+[ 2017-01-04T09:49:40+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000704s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0029s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0026s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000366s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030426s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030548s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000661s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2017-01-04T09:50:35+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0034s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0026s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000230s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000336s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032435s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032537s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2017-01-04T09:51:10+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0027s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000237s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000337s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030045s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000652s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000776s ]
+
+[ 2017-01-04T09:53:32+08:00 ] 10.32.32.29 /topNew/Planjhy/userform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `info_admin` WHERE ( id_employee=123 and if_delete=0 ) LIMIT 1   [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: validate /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /home/wwwroot/default/topNew/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `info_admin` (`username`,`user_department`,`user_office`,`user_leader`,`if_delete`,`id_level`,`id_employee`,`user_job`) VALUES ('','COT部','123','张瞾莹','0','3','123','123') [ RunTime:0.0005s ]
+
+[ 2017-01-04T09:53:33+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0026s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000257s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000355s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029529s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000816s ]
+
+[ 2017-01-04T09:54:36+08:00 ] 10.32.32.29 /topNew/Planjhy/deleteuser?vid=8940
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000776s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0019s ]
+SQL: UPDATE `info_admin` SET `if_delete`='1' WHERE ( id=8940 ) [ RunTime:0.0005s ]
+
+[ 2017-01-04T09:54:38+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000202s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0029s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0022s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000284s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000403s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034187s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2017-01-04T09:54:43+08:00 ] 10.32.32.29 /topNew/Planjhy/deleuser?vid=8940
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0016s ]
+SQL: DELETE FROM `info_admin` WHERE ( id=8940 ) [ RunTime:0.0004s ]
+
+[ 2017-01-04T09:54:44+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0044s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000312s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000416s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031607s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000785s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000879s ]
+
+[ 2017-01-04T09:54:49+08:00 ] 10.32.32.29 /topNew/Planjhy/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::index() should be compatible with that of Home\Controller\BaseController::index() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\PlanjhyController::delete() should be compatible with that of Home\Controller\BaseController::delete() /home/wwwroot/default/topNew/Application/Home/Controller/PlanjhyController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `info_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 0 AND `user_department` = 'COT部'  [ RunTime:0.0029s ]
+SQL: SELECT * FROM `info_admin` WHERE `if_delete` = 1 AND `user_department` = 'COT部'  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `info_admin` WHERE `user_department` = 'COT部'  [ RunTime:0.0025s ]
+SQL: SELECT * FROM `info_admin` WHERE `id_level` = 4 AND `user_department` = 'COT部'  [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000243s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000362s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031324s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000716s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000809s ]
+

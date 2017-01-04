@@ -1,0 +1,194 @@
+<include file="Public/header" /> 
+<style type="text/css">
+.column-title{
+  text-align: center;
+}
+</style>
+<div class="right_col" role="main">
+              <div class="row">
+             <!--  <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>上级评价表</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Username</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+              </div> -->
+              
+
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>清单总结</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+<form action="{:U('Plan/addmodplan')}" method="post" class="form-horizontal">
+                  <div class="x_content">
+
+                    <div class="table-responsive">
+                    <empty name="list">
+                    <p>上月没有添加计划！</p>
+                    </empty>
+                    <notempty name="list">
+                      <table class="table table-striped jambo_table bulk_action" style="text-align:center;">
+                        <thead>
+                          <tr class="headings">
+                            <th class="column-title" style="text-align:center;">工作类别</th>
+                            <th class="column-title">工作类型</th>
+                            <th class="column-title">工作事项</th>
+                            <th class="column-title">计划完成时间 </th>
+                            <th class="column-title">权重 </th>
+                            <th class="column-title">工作内容及目标/交付物 </th>
+                            <th class="column-title">自我工作总结（完成情况） </th>
+                            <th class="column-title">自评等级 </th>
+                            <th class="column-title">是否延续</th>
+                            <th class="column-title">评价人</th>
+                            <th class="column-title">上级评价 </th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                        <volist name="list" id="vo">
+                        <input type="hidden" name="plan{$i}[id]" value="{$vo.id}">
+                          <tr class="even pointer">
+                            <td class=" ">
+                              <label>
+                                {$vo.plan_type}
+                              </label>
+                            </td>
+                            <td class=" ">
+                              <label>
+                                {$vo.plan_classify}
+                              </label>
+                            </td>
+                            <td class=" ">
+                              <label>
+                                {$vo.plan_name}
+                              </label>
+                            </td>
+                            <td class=" ">
+                              <label>
+                                {$vo.plan_closingdate}
+                              </label>
+                            </td>
+                            <td class=" ">
+                              <label>
+                                {$vo.plan_weight}
+                              </label>
+                            </td>
+                            <td class=" ">
+                              <label>
+                                {$vo.plan_content}
+                              </label>
+                            </td>
+                             <td class=" ">
+                              <textarea name="plan{$i}[plan_sum]">{$vo.plan_sum}</textarea>
+                            </td>
+                            <td class=" ">
+                              <select class="form-control" name="plan{$i}[plan_self]">
+                                <option value="S" <if condition="$vo.plan_self eq S">selected</if>>S</option>
+                                <option value="A" <if condition="$vo.plan_self eq A">selected</if>>A</option>
+                                <option value="B" <if condition="$vo.plan_self eq B">selected</if>>B</option>
+                                <option value="C" <if condition="$vo.plan_self eq C">selected</if>>C</option>
+                              </select>
+                            </td>
+                            <td class=" ">
+                              <label>
+                                <if condition="$vo.if_continue eq 1">
+                                是
+                                <else/>否
+                                </if>
+                              </label>
+                            </td>
+                            <td class=" ">
+                              <label>
+                                {$vo.plan_leader}
+                              </label>
+                            </td>
+
+                            <td class=" " width="200px;">
+                              <label>
+                               
+                              </label>
+                            </td>
+                            
+                          </tr>
+                        </volist>
+                        </tbody>
+                      </table>
+                       <input class="btn btn-success" type="submit" value="提交" style="margin-left:40%;width:10%;">
+                      </notempty>
+                    </div>
+                  </div>
+                 
+                  </form>
+                </div>
+              </div>
+              </div>
+</div>
+<include file="Public/foot" /> 

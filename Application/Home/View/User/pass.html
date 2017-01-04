@@ -1,0 +1,121 @@
+
+<if condition="$Think.session.admin.id_level eq 2">
+<include file="Public/headerr" /> 
+</if>
+<if condition="$Think.session.admin.id_level neq 2">
+<include file="Public/header" /> 
+</if>
+<div class="right_col" role="main">
+  
+
+ <div class="row">
+              <div class="col-md-12 col-xs-13">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>修改密码</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <!-- <form class="form-horizontal form-label-left input_mask"> -->
+                    <form action="{:U('User/modpass')}" method="post" class="form-horizontal">
+
+
+                      
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">旧密码：</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                           <input type="password" class="form-control" name="password" id="password">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">新密码：</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                           <input type="password" class="form-control"  id="password1" name="password1">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">确认密码：</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                           <input type="password" class="form-control"  id="password2" name="password2">
+                        </div>
+                      </div>
+                     
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                          <!-- <button type="submit" class="btn btn-primary">Cancel</button> -->
+                          <input class="btn btn-success" type="button" id="sub" value="提交" onclick="fnn()" style="margin-left:40%;width:10%;">
+
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+
+
+</div>
+<include file="Public/foot" /> 
+<script>
+  function fnn(){
+    // var pas=document.getElementsByName('password');
+    // var pas1=document.getElementsByName('password1');
+    // var pas2=document.getElementsByName('password2');
+    // alert(pas[0].value);
+    var pas = $("#password").val();
+    var pas1 = $("#password1").val();
+    var pas2 = $("#password2").val();
+    if(pas1==""||pas2==""||pas=="")
+    {
+      alert('不能为空！');
+      return false;
+    }
+    if(pas1!=pas2)
+    {
+      alert('密码不一致，请重新输入!');
+      return false;
+    }
+    if(pas1==pas2)
+    {
+      var action = "modpass";
+      $.ajax({
+        type:"POST",
+        url:action,
+        
+        data:{"pas":pas,"pas1":pas1,"pas2":pas2},
+        success:function(data){
+          if(data.success==1){  
+             alert('修改成功！请重新登录！');
+             window.location.href="../login/login"; 
+          }
+          if(data.success==-1){  
+             alert('原始密码错误！');
+             return false;
+          }
+          if(data.success==0){  
+            //alert(data.success);
+          alert("修改失败！");
+            return false;
+          }
+        }
+      });
+    }
+
+  }
+</script>

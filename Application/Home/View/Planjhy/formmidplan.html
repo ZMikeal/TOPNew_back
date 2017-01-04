@@ -1,0 +1,172 @@
+<include file="Public/headerr" /> 
+<style type="text/css">
+.column-title{
+  text-align: center;
+}
+</style>
+
+<div class="right_col" role="main">
+              <div class="row">
+              
+
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>时间周期控制</h2>
+                    <div class="clearfix"></div>
+                  </div>
+<form id="postForm" name="postForm" action="{:U('Planjhy/addmplan')}" method="post" class="form-horizontal">
+                  <div class="x_content">
+
+                    <div class="table-responsive">
+
+                 
+                      <table class="table table-striped jambo_table bulk_action" style="text-align:center;">
+                        <thead>
+                          <tr class="headings">
+                            <th class="column-title">控制级别</th>                     
+                            <th class="column-title">个人级</th>
+                            <th class="column-title">年度</th>
+                            <th class="column-title">月度</th>
+                            <th class="column-title">操作</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+
+                        <for start="1" end="16" name="j">
+                     
+                          <tr class="even pointer">
+                            <td class=" ">
+                             {$j}
+                            </td>
+                           
+                             <td class=" ">
+                            <select name="id_employee[]" class="form-control" id="la[]">
+                                    <option value=""> </option>
+                                    <notempty name="list1">
+                                    <volist name="list" id="vo">  
+                                   
+                                    <if condition="$Think.session.admin.username neq $vo[username]"> 
+                                    <option value="{$vo.id_employee}" <if condition="$list1[$j-1]['id_employee'] eq $vo[id_employee]">selected</if>>{$vo.username}<!-- {$vo.id_employee} --></option>   
+                                    </if>
+                                    </volist>
+                                    </notempty>
+
+                                    <empty name="list1">
+                                    <volist name="list" id="vo">  
+                                    <if condition="$Think.session.admin.username neq $vo[username]">  <option value="{$vo.id_employee}">{$vo.username}</option>   
+                                    </if>
+                                    </volist>
+                                    </empty>
+                            </select>
+                            </td>
+                             
+                             <td class=" ">
+                            <select name="plan[{$j}][year]" class="form-control">                 
+                                    <option value="{$year['1']}" <if condition="$list1[$j-1]['year'] eq $year['1']">selected</if>>{$year['1']}</option>
+                                    <option value="{$year['2']}" <if condition="$list1[$j-1]['year'] eq $year['2']">selected</if>>{$year['2']}</option>      
+                            </select>
+                            </td>
+                             <td class=" ">
+                            <select name="plan[{$j}][month]" class="form-control"> 
+                                    <if condition="$list1[$j-1]['month'] neq ''">
+                                    <for start="1" end="13" name="jj">                
+                                    <option value="{$jj}" <if condition="$jj eq $list1[$j-1]['month']">selected</if>>{$jj}</option> 
+                                    </for>
+                                    </if>   
+                                    <if condition="$list1[$j-1]['month'] eq ''">
+                                    <for start="1" end="13" name="jj">                
+                                    <option value="{$jj}" <if condition="$jj eq $year['m']">selected</if>>{$jj}</option> 
+                                    </for>
+                                    </if>   
+                            </select>
+                            </td>
+                            <td>
+                            <input type="hidden" name="ii[]" value="{$list1[$j-1][id]}">
+                            [ <a id="{$j}" href="" onclick="fn1(this)">删除</a> ]
+                            </td>
+                            </tr>
+                        </for>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <input class="btn btn-success" type="button" id="sub" value="提交" onclick="fn()" style="margin-left:40%;width:10%;">
+
+                  </form>
+                </div>
+              </div>
+              </div>
+</div>
+<include file="Public/foot" /> 
+<script type="text/javascript">
+  function fn()
+  {
+      var id_employee=document.getElementsByName('id_employee[]');
+      var re=0;
+       for(var i=1;i<=id_employee.length;i++)
+       {
+          if(id_employee[i-1].value!="")
+          {
+            re=1;
+          }
+       }
+      if(re==0)
+      {
+        alert('请选择个人级！');
+        return false;
+      }
+      if(re==1)
+      {
+         document.getElementById("postForm").submit();
+      }
+    }
+    function fn1(tt)
+  {
+      //console.log('11111');
+      var id_employee=document.getElementsByName('id_employee[]');
+      var rer=tt.id;
+      
+          if(id_employee[rer-1].value=="")
+          {
+            alert('个人级为空！');
+            location.reload();//页面跳转问题
+            //return false;
+          }
+
+          if(id_employee[rer-1].value!="")
+          {
+             if (confirm("确定要删除吗？")) 
+             {
+               var idd=document.getElementsByName('ii[]');
+               var hehe=idd[rer-1].value;
+               //alert("hehe"+hehe+"heiehi");
+      //             var action = "__ROOT__/index.php/Planjhy/delete";
+                  var action = "delete";
+                 
+      $.ajax({
+        type:"POST",
+        url:action,
+        data:{"pas":hehe},
+        dataType:"json",
+        success:function(data){
+          //alert("删除成功!");
+          if(data.success==1){  
+             alert("删除成功!");
+              // location.reload();//页面跳转问题
+              location.href='formmidplan.html';
+          }
+          else{
+            //alert(data.success);
+          alert("删除失败！");
+             //location.replace(location);//页面跳转问题
+          }
+        }
+        //error:function(e){alert(e);}
+      });
+                }
+          }
+    }
+    </script>
