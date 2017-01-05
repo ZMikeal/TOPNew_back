@@ -334,7 +334,7 @@
 
                         <tbody>
 
-                        <?php $__FOR_START_784451899__=1;$__FOR_END_784451899__=8;for($j=$__FOR_START_784451899__;$j < $__FOR_END_784451899__;$j+=1){ if(!empty($list1)): ?><tr class="even pointer">
+                        <?php $__FOR_START_1215246093__=1;$__FOR_END_1215246093__=8;for($j=$__FOR_START_1215246093__;$j < $__FOR_END_1215246093__;$j+=1){ if(!empty($list1)): ?><tr class="even pointer">
                             <td class=" ">
                             <select name="plan[<?php echo ($j); ?>][plan_type]" class="form-control">                 
                                     <option value="部门重点工作" >部门重点工作</option>    
@@ -400,7 +400,7 @@
                             </select>
                             </td>
                           </tr><?php endif; } ?>
-                      <?php $__FOR_START_1874310716__=8;$__FOR_END_1874310716__=10;for($j=$__FOR_START_1874310716__;$j < $__FOR_END_1874310716__;$j+=1){ if(!empty($listt1)): ?><tr class="even pointer">
+                      <?php $__FOR_START_1598991964__=8;$__FOR_END_1598991964__=10;for($j=$__FOR_START_1598991964__;$j < $__FOR_END_1598991964__;$j+=1){ if(!empty($listt1)): ?><tr class="even pointer">
                             <td class=" ">
                             <select name="plan[<?php echo ($j); ?>][plan_type]" class="form-control">                 
                                     <option value="改善创新项" >改善创新项</option>    
@@ -569,7 +569,7 @@
                         <tbody>
 
                         
-                        <?php if(!empty($list1)): $__FOR_START_312215547__=1;$__FOR_END_312215547__=8;for($j=$__FOR_START_312215547__;$j < $__FOR_END_312215547__;$j+=1){ ?><tr class="even pointer">
+                        <?php if(!empty($list1)): $__FOR_START_505780487__=1;$__FOR_END_505780487__=8;for($j=$__FOR_START_505780487__;$j < $__FOR_END_505780487__;$j+=1){ ?><tr class="even pointer">
                             <td class=" ">
                             <select name="plan[<?php echo ($j); ?>][plan_type]" class="form-control">                 
                                     <option value="科室工作" <?php if($list1[$j-1]['plan_type'] == '科室工作'): ?>selected="selected"<?php endif; ?>>科室工作</option>
@@ -608,7 +608,7 @@
                             </select>
                             </td>
                           </tr><?php } endif; ?>
-                        <?php if(empty($list1)): $__FOR_START_1617682572__=1;$__FOR_END_1617682572__=8;for($j=$__FOR_START_1617682572__;$j < $__FOR_END_1617682572__;$j+=1){ ?><tr class="even pointer">
+                        <?php if(empty($list1)): $__FOR_START_1739264659__=1;$__FOR_END_1739264659__=8;for($j=$__FOR_START_1739264659__;$j < $__FOR_END_1739264659__;$j+=1){ ?><tr class="even pointer">
                             <td class=" ">
                             <select name="plan[<?php echo ($j); ?>][plan_type]" class="form-control">                 
                                     <option value="科室工作" <?php if($list[$j-1]['plan_type'] == '科室工作'): ?>selected="selected"<?php endif; ?>>科室工作</option>
@@ -647,7 +647,7 @@
                             </select>
                             </td>
                           </tr><?php } endif; ?>                    
-                    <?php $__FOR_START_552481155__=8;$__FOR_END_552481155__=10;for($j=$__FOR_START_552481155__;$j < $__FOR_END_552481155__;$j+=1){ if(!empty($listt1)): ?><tr class="even pointer">
+                    <?php $__FOR_START_280592497__=8;$__FOR_END_280592497__=10;for($j=$__FOR_START_280592497__;$j < $__FOR_END_280592497__;$j+=1){ if(!empty($listt1)): ?><tr class="even pointer">
                             <td class=" ">
                             <select name="plan[<?php echo ($j); ?>][plan_type]" class="form-control">                 
                                     <option value="改善创新项" >改善创新项</option>    
@@ -727,7 +727,8 @@
     <!--<script src="/topNew/Public/custom/jquery.min.js"></script>-->
     <script src="/topNew/Public/custom/js/bootstrap.min.js"></script>
     <script src="/topNew/Public/custom/js/custom.min.js"></script>
-   
+   <script src="/topNew/Public/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/topNew/Public/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <!-- /gauge.js -->
      <script src="/topNew/Public/custom/js/moment.min.js"></script>
               <script src="/topNew/Public/custom/js/daterangepicker.js"></script>
@@ -754,7 +755,7 @@
       var gongzuoneirong=document.getElementsByName('gongzuoneirong[]');
       //var planleader=document.getElementsByName('plan_leader[]');
       var zongquanzhong=0;
-      var zongquanzhong1=0;
+      var zongquanzhong1=10;
       //alert(zongquanzhong);
       var xx = new Array(6);
       //alert(gongchengxiangmu.length);
@@ -793,27 +794,27 @@
       {
         if(gongchengxiangmu[i-1].value!="")
             {
-              var dd=0;
+              var dd1=0;
               if(wanchengriqi[i-1].value=="")
               {
                 alert("请在第"+i+"行填写完成日期");
-                dd=1;
+                dd1=1;
                 return false;
               }
               if(quanzhong[i-1].value=="")
               {
                 alert("请在第"+i+"行填写工作权重");
-                dd=1;
+                dd1=1;
                 return false;
               }
               if(gongzuoneirong[i-1].value=="")
               {
                 alert("请在第"+i+"行填写工作内容和交付物");
-                dd=1;
+                dd1=1;
                 return false;
               }
                
-              if(dd==0)
+              if(dd1==0)
               {
                 zongquanzhong1+=parseInt(quanzhong[i-1].value);
                  xx[i-1]=i;

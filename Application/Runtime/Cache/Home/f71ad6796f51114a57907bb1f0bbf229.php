@@ -292,6 +292,7 @@
                           <th>岗位</th>
                           <th>上级</th>
                           <th>等级</th>
+                          <th>类型</th>
                           <th>操作</th>
                         </tr>
                       </thead>
@@ -310,7 +311,14 @@
                             <?php case "4": ?>科长<?php break;?>
                             <?php case "5": ?>院长<?php break;?>
                             <?php case "7": ?>VSE<?php break;?>
-                            <?php default: ?>default<?php endswitch;?>
+                            <?php default: endswitch;?>
+                       </td>
+                       <td><?php switch($vo["user_type"]): case "专业员工": ?>专业员工<?php break;?>
+                            <?php case "职能员工": ?>职能员工<?php break;?>
+                            <?php case "科长": ?>科长<?php break;?>
+                            <?php case "院长": ?>院长<?php break;?>
+                            <?php case "VSE": ?>VSE<?php break;?>                            
+                            <?php default: endswitch;?>
                        </td>
                        <td style="width:250px;">
                        <a class="btn btn-default btn-lg active" href="#" onclick="fn(this)" role="button" data-toggle="modal"  data-target="#bianji">编辑</a>
@@ -419,6 +427,13 @@
             </td>
           </tr>
           <tr>
+            <th>用户名:</th>
+            <td>
+            <div class="form-group has-success">
+            <input type="text" id="nickname" class="form-control"></div>
+            </td>
+          </tr>
+          <tr>
             <th>工号:</th>
             <td><input type="text" id="id_employee" class="form-control"></td>
           </tr>
@@ -429,6 +444,16 @@
               <option value="4">科长</option>
               <option value="5">部长</option>
               <option value="7">VSE</option>
+            </select></td>
+          </tr>
+          <tr>
+            <th>类型:</th>
+            <td><select id="type1" class="form-control">
+              <option value="专业员工">专业员工</option>
+              <option value="职能员工">职能员工</option>
+              <option value="院长">院长</option>
+              <option value="科长">科长</option>
+              <option value="VSE">VSE</option>
             </select></td>
           </tr>
           <tr>
@@ -506,6 +531,18 @@
               <option value="7">VSE</option>
             </select></td>
           </tr>
+          <tr>
+            <th>类型:</th>
+            <td><select id="typee" class="form-control">
+              <option value="">默认</option>
+              
+              <option value="职能员工">职能员工</option>
+              <option value="专业员工">专业员工</option>
+              <option value="院长">院长</option>
+              <option value="科长">科长</option>
+              <option value="VSE">VSE</option>
+            </select></td>
+          </tr>
          </table>
          <input type="button" id="sub-mod" class="btn-block btn-lg btn-primary" value="提交">
           
@@ -559,13 +596,15 @@ $(document).ready(function() {
     $(function(){
     $("#sub-form").click(function(){
       var username = $("#username").val();
+      var nickname = $("#nickname").val();
       var id_employee = $("#id_employee").val();
       var level1 = $("#level1").val();
       var leader1 = $("#leader1").val();
       var office1 = $("#office1").val();
       var job = $("#job").val();
+      var type1 = $("#type1").val();
       var action = "userform";
-      if(username=="" || id_employee==""|| office1==""|| job==""){
+      if(username=="" || id_employee==""|| office1==""|| job==""||nickname==""){
         alert("不能为空!");
         return false;
       }
@@ -573,7 +612,7 @@ $(document).ready(function() {
         type:"POST",
         url:action,
         dataType:"json",
-        data:{"username":username,"id_employee":id_employee,"level1":level1,"leader1":leader1,"office1":office1,"job":job},
+        data:{"username":username,"id_employee":id_employee,"level1":level1,"leader1":leader1,"office1":office1,"job":job,"nickname":nickname,"type1":type1},
         success:function(data){
           if(data.success==1){
             alert('添加成功!');
@@ -597,6 +636,7 @@ $(document).ready(function() {
       var leader = $("#leader").val();
       var job = $("#text4").val();
       var level = $("#level").val();
+      var typee = $("#typee").val();
       var action = "usermod";
       if(office==""||job==""){
         alert("不能为空！");
@@ -606,7 +646,7 @@ $(document).ready(function() {
         type:"POST",
         url:action,
         dataType:"json",
-        data:{"id":id,"office":office,"level":level,"leader":leader,"job":job,},
+        data:{"id":id,"office":office,"level":level,"leader":leader,"job":job,"typee":typee},
         success:function(data){
           if(data.success==1){
             alert('编辑成功!');

@@ -288,7 +288,7 @@
 
                         <tbody>
 
-                        <?php $__FOR_START_1598551885__=1;$__FOR_END_1598551885__=16;for($j=$__FOR_START_1598551885__;$j < $__FOR_END_1598551885__;$j+=1){ ?><tr class="even pointer">
+                        <?php $__FOR_START_745292918__=1;$__FOR_END_745292918__=16;for($j=$__FOR_START_745292918__;$j < $__FOR_END_745292918__;$j+=1){ ?><tr class="even pointer">
                             <td class=" ">
                              <?php echo ($j); ?>
                             </td>
@@ -310,8 +310,8 @@
                             </td>
                              <td class=" ">
                             <select name="plan[<?php echo ($j); ?>][month]" class="form-control"> 
-                                    <?php if($list1[$j-1]['month'] != ''): $__FOR_START_1114431296__=1;$__FOR_END_1114431296__=13;for($jj=$__FOR_START_1114431296__;$jj < $__FOR_END_1114431296__;$jj+=1){ ?><option value="<?php echo ($jj); ?>" <?php if($jj == $list1[$j-1]['month']): ?>selected<?php endif; ?>><?php echo ($jj); ?></option><?php } endif; ?>   
-                                    <?php if($list1[$j-1]['month'] == ''): $__FOR_START_1605678838__=1;$__FOR_END_1605678838__=13;for($jj=$__FOR_START_1605678838__;$jj < $__FOR_END_1605678838__;$jj+=1){ ?><option value="<?php echo ($jj); ?>" <?php if($jj == $year['m']): ?>selected<?php endif; ?>><?php echo ($jj); ?></option><?php } endif; ?>   
+                                    <?php if($list1[$j-1]['month'] != ''): $__FOR_START_2025952349__=1;$__FOR_END_2025952349__=13;for($jj=$__FOR_START_2025952349__;$jj < $__FOR_END_2025952349__;$jj+=1){ ?><option value="<?php echo ($jj); ?>" <?php if($jj == $list1[$j-1]['month']): ?>selected<?php endif; ?>><?php echo ($jj); ?></option><?php } endif; ?>   
+                                    <?php if($list1[$j-1]['month'] == ''): $__FOR_START_435498558__=1;$__FOR_END_435498558__=13;for($jj=$__FOR_START_435498558__;$jj < $__FOR_END_435498558__;$jj+=1){ ?><option value="<?php echo ($jj); ?>" <?php if($jj == $year['m']): ?>selected<?php endif; ?>><?php echo ($jj); ?></option><?php } endif; ?>   
                             </select>
                             </td>
                             <td>
@@ -338,7 +338,8 @@
     <!--<script src="/topNew/Public/custom/jquery.min.js"></script>-->
     <script src="/topNew/Public/custom/js/bootstrap.min.js"></script>
     <script src="/topNew/Public/custom/js/custom.min.js"></script>
-   
+   <script src="/topNew/Public/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/topNew/Public/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <!-- /gauge.js -->
      <script src="/topNew/Public/custom/js/moment.min.js"></script>
               <script src="/topNew/Public/custom/js/daterangepicker.js"></script>

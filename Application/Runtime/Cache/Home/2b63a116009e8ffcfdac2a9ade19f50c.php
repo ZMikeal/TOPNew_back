@@ -338,7 +338,7 @@
 
                         <tbody>
 
-                        <?php $__FOR_START_1426974541__=1;$__FOR_END_1426974541__=8;for($j=$__FOR_START_1426974541__;$j < $__FOR_END_1426974541__;$j+=1){ ?><tr class="even pointer">
+                        <?php $__FOR_START_623298892__=1;$__FOR_END_623298892__=8;for($j=$__FOR_START_623298892__;$j < $__FOR_END_623298892__;$j+=1){ ?><tr class="even pointer">
                             <td class=" ">
                             <input type="hidden" value="<?php echo ($list[$j-1]['id']); ?>" name="id[]">
                             <select name="plan[<?php echo ($j); ?>][plan_type]" class="form-control">                 
@@ -472,7 +472,7 @@
 
                         <tbody>
 
-                        <?php $__FOR_START_1244807931__=1;$__FOR_END_1244807931__=8;for($j=$__FOR_START_1244807931__;$j < $__FOR_END_1244807931__;$j+=1){ ?><tr class="even pointer">
+                        <?php $__FOR_START_2073347205__=1;$__FOR_END_2073347205__=8;for($j=$__FOR_START_2073347205__;$j < $__FOR_END_2073347205__;$j+=1){ ?><tr class="even pointer">
                             <td class=" ">
                             <input type="hidden" value="<?php echo ($list[$j-1]['id']); ?>" name="id[]">
                             <?php if($_SESSION['admin']['id_level']== 5): ?><select name="plan[<?php echo ($j); ?>][plan_type]" class="form-control">                 
@@ -529,7 +529,8 @@
     <!--<script src="/topNew/Public/custom/jquery.min.js"></script>-->
     <script src="/topNew/Public/custom/js/bootstrap.min.js"></script>
     <script src="/topNew/Public/custom/js/custom.min.js"></script>
-   
+   <script src="/topNew/Public/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/topNew/Public/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <!-- /gauge.js -->
      <script src="/topNew/Public/custom/js/moment.min.js"></script>
               <script src="/topNew/Public/custom/js/daterangepicker.js"></script>

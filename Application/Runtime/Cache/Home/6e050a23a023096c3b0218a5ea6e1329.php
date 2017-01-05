@@ -482,7 +482,8 @@
     <!--<script src="/topNew/Public/custom/jquery.min.js"></script>-->
     <script src="/topNew/Public/custom/js/bootstrap.min.js"></script>
     <script src="/topNew/Public/custom/js/custom.min.js"></script>
-   
+   <script src="/topNew/Public/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/topNew/Public/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <!-- /gauge.js -->
      <script src="/topNew/Public/custom/js/moment.min.js"></script>
               <script src="/topNew/Public/custom/js/daterangepicker.js"></script>

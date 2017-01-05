@@ -297,14 +297,14 @@ class PlanjhyController extends BaseController {
       $tj['if_delete']='0';
       $tj['user_department']=session('admin.user_department');
       //dump($tj);
-      $vse = $this->model->where($tj)->select();
+      $vse = $this->model->where($tj)->order('id desc')->select();
       //dump($vse);exit;
       $this->assign('vse',$vse);// 赋值数据集
 
       $tj['if_delete']='1';
       $tj['user_department']=session('admin.user_department');
       //dump($tj);
-      $vse1 = $this->model->where($tj)->select();
+      $vse1 = $this->model->where($tj)->order('id desc')->select();
       //dump($vse);exit;
       $this->assign('vse1',$vse1);// 赋值数据集
 
@@ -343,6 +343,9 @@ class PlanjhyController extends BaseController {
         $map['id_level']=I('post.level1');;
         $map['id_employee']=I('post.id_employee');
         $map['user_job']=I('post.job');
+        $map['nickname']=I('post.nickname');
+        $map['user_type']=I('post.type1');
+
         if($this->model->create($map)){
         $this->model->add();
         $result['success']=1;
@@ -365,6 +368,10 @@ class PlanjhyController extends BaseController {
         $tj2['id_level']=I('post.level');
         if($tj2['id_level']==""){
           unset($tj2['id_level']);
+        }
+        $tj2['user_type']=I('post.typee');
+        if($tj2['user_type']==""){
+          unset($tj2['user_type']);
         }
         $tj2['user_leader']=I('post.leader');
         if($tj2['user_leader']==""){

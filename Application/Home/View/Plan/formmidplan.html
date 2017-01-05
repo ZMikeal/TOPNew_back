@@ -496,7 +496,7 @@
       var gongzuoneirong=document.getElementsByName('gongzuoneirong[]');
       //var planleader=document.getElementsByName('plan_leader[]');
       var zongquanzhong=0;
-      var zongquanzhong1=0;
+      var zongquanzhong1=10;
       //alert(zongquanzhong);
       var xx = new Array(6);
       //alert(gongchengxiangmu.length);
@@ -535,27 +535,27 @@
       {
         if(gongchengxiangmu[i-1].value!="")
             {
-              var dd=0;
+              var dd1=0;
               if(wanchengriqi[i-1].value=="")
               {
                 alert("请在第"+i+"行填写完成日期");
-                dd=1;
+                dd1=1;
                 return false;
               }
               if(quanzhong[i-1].value=="")
               {
                 alert("请在第"+i+"行填写工作权重");
-                dd=1;
+                dd1=1;
                 return false;
               }
               if(gongzuoneirong[i-1].value=="")
               {
                 alert("请在第"+i+"行填写工作内容和交付物");
-                dd=1;
+                dd1=1;
                 return false;
               }
                
-              if(dd==0)
+              if(dd1==0)
               {
                 zongquanzhong1+=parseInt(quanzhong[i-1].value);
                  xx[i-1]=i;
