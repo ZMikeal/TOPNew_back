@@ -5,18 +5,18 @@
   text-align: center;
 }
 </style>
-<form id="postForm" name="postForm" action="{:U('PlanY/addmplan')}" method="post" class="form-horizontal">
+
 <div class="right_col" role="main">
-              <div class="row">
+<div class="row">
+<form id="postForm" name="postForm" action="{:U('PlanY/addmplan')}" method="post" class="form-horizontal">
 
-
-<if condition="$Think.session.admin.id_level eq 5">
- <empty name="time">
+<empty name="time">
                         年度计划创建时间为每年的 1.1 - 1.15 ,请在时间范围内创建计划！
- </empty>
+</empty>
 <notempty name="time">
- <div class="x_panel">
-                  <div class="x_title">
+  <if condition="$Think.session.admin.id_level eq 5">
+  <div class="x_panel">
+               <div class="x_title">
                     <h2>年度计划（时间:{$Think.session.admin.year_sys}年）</h2>
                      <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -34,8 +34,8 @@
                       </li>
                     </ul>
                     <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
+                </div>
+                <div class="x_content">
 
                       <table class="table table-striped jambo_table bulk_action" style="text-align:center;height:100%;">
                         <thead>
@@ -51,7 +51,7 @@
 
                         <tbody>
 
-                        <for start="1" end="8" name="j">
+                        <for start="1" end="11" name="j">
                           <tr class="even pointer">
                             <td class=" ">
                             <input type="hidden" value="{$list[$j-1]['id']}" name="id[]">
@@ -79,14 +79,70 @@
                           </tr>  
                                          
                         </for>
+                         <for start="11" end="16" name="j">
+                          <tr class="even pointer">
+                            <td class=" ">
+                            <input type="hidden" value="{$nljs[$j-11]['id']}" name="id[]">
+                            <select name="plan[{$j}][plan_type]" class="form-control">                 
+                                    <option value="能力建设" <if condition="$nljs[$j-11]['plan_type'] eq '能力建设'">selected</if>>能力建设</option>    
+                                 </select>
+                            </td>
+                            <td class=" ">
+                            <select name="plan[{$j}][plan_classify]" class="form-control">
+                                    <option value="重点工作" <if condition="$nljs[$j-11]['plan_classify'] eq '重点工作'">selected</if>>重点工作</option>
+                                    <option value="常规工作" <if condition="$nljs[$j-11]['plan_classify'] eq '常规工作'">selected</if>>常规工作</option>
+                                 </select></td>
+                            <td class=" ">
+                              <textarea name="gongchengxiangmu[]" id="gongchengxiangmu[]" placeholder="" style="text-align:left;">{$nljs[$j-11].plan_name}</textarea>
+                            </td>
+                            <td class=" ">
+                         <input type="text" class="data" name="wanchengriqi[]" placeholder="First Name" aria-describedby="inputSuccess2Status2" value="{$nljs[$j-11].plan_closingdate}">                       
+                            </td>
+                            <td class=" ">
+                              <input type="text" name="quanzhong[]" style="width:50px;" maxlength="3" id="quanzhong[]" value="{$nljs[$j-11].plan_weight}">
+                            </td>
+                            <td class=" ">
+                              <textarea name="gongzuoneirong[]" id="gongzuoneirong[]" placeholder="" style="width:300px; ">{$nljs[$j-11].plan_content}</textarea>
+                            </td>
+                          </tr>  
+                                         
+                        </for>
+                         <for start="16" end="19" name="j">
+                          <tr class="even pointer">
+                            <td class=" ">
+                            <input type="hidden" value="{$tzx[$j-16]['id']}" name="id[]">
+                            <select name="plan[{$j}][plan_type]" class="form-control">                 
+                                    <option value="调整项" <if condition="$tzx[$j-16]['plan_type'] eq '调整项'">selected</if>>调整项</option>    
+                                 </select>
+                            </td>
+                            <td class=" ">
+                            <select name="plan[{$j}][plan_classify]" class="form-control">
+                                    <option value="重点工作" <if condition="$tzx[$j-16]['plan_classify'] eq '重点工作'">selected</if>>重点工作</option>
+                                    <option value="常规工作" <if condition="$tzx[$j-16]['plan_classify'] eq '常规工作'">selected</if>>常规工作</option>
+                                 </select></td>
+                            <td class=" ">
+                              <textarea name="gongchengxiangmu[]" id="gongchengxiangmu[]" placeholder="" style="text-align:left;">{$tzx[$j-16].plan_name}</textarea>
+                            </td>
+                            <td class=" ">
+                         <input type="text" class="data" name="wanchengriqi[]" placeholder="First Name" aria-describedby="inputSuccess2Status2" value="{$tzx[$j-16].plan_closingdate}">                       
+                            </td>
+                            <td class=" ">
+                              <input type="text" name="quanzhong[]" style="width:50px;" maxlength="3" id="quanzhong[]" value="{$tzx[$j-16].plan_weight}">
+                            </td>
+                            <td class=" ">
+                              <textarea name="gongzuoneirong[]" id="gongzuoneirong[]" placeholder="" style="width:300px; ">{$tzx[$j-16].plan_content}</textarea>
+                            </td>
+                          </tr>  
+                                         
+                        </for>
                         </tbody>
                       </table>
                       <input class="btn btn-success" type="button" value="提交" onclick="fn()" style="margin-left:40%;width:10%;">
-                      </div></div>
-</notempty>
-</if>
-<if condition="$Think.session.admin.id_level neq 5">
-<div class="x_panel">
+                  </div>
+                  </div>
+  </if>
+  <if condition="$Think.session.admin.id_level eq 4">
+  <div class="x_panel">
                   <div class="x_title">
                     <h2>上级:{$Think.session.admin.user_leader} 的计划表</h2>
                      <ul class="nav navbar-right panel_toolbox">
@@ -172,7 +228,7 @@
                   <div class="x_content">
 
                     <div class="table-responsive">
-<if condition="$Think.session.admin.id_level neq 5">                  
+                
                   <empty name="list2">
                   <table class="table table-striped jambo_table bulk_action" style="text-align:center;height:590px;">
                   <tr class="headings">
@@ -181,11 +237,8 @@
                   </table>
                   </empty>
                   
-                  <notempty name="list2"><!-- 上级 -->
-                  <empty name="time">
-                        年度计划创建时间为每年的 1.1 - 1.15 ,请在时间范围内创建计划！
-                  </empty>
-                  <notempty name="time"><!-- 不延续 -->
+            <notempty name="list2"><!-- 上级 -->
+
                       <table class="table table-striped jambo_table bulk_action" style="text-align:center;height:100%;">
                         <thead>
                           <tr class="headings">
@@ -195,34 +248,18 @@
                             <th class="column-title">计划完成时间 </th>
                             <th class="column-title">权重 </th>
                             <th class="column-title">工作内容及目标/交付物 </th>
-                            <if condition="$Think.session.admin.id_level eq 3">
-                            <if condition="$Think.session.admin.user_type eq 专业员工">
-                            <th class="column-title">VSE姓名 </th>
-                            </if>
-                            </if>
-                           <!--  <th class="column-title no-link last" ><span class="nobr">是否延续</span></th> -->
                           </tr>
                         </thead>
 
                         <tbody>
 
-                        <for start="1" end="8" name="j">
-
-                       
-                     
+                        <for start="1" end="11" name="j">
                           <tr class="even pointer">
                             <td class=" ">
                             <input type="hidden" value="{$list[$j-1]['id']}" name="id[]">
-                            <if condition="$Think.session.admin.id_level eq 5">
                             <select name="plan[{$j}][plan_type]" class="form-control">                 
-                                    <option value="部门重点工作" <if condition="$list[$j-1]['plan_type'] eq '部门重点工作'">selected</if>>部门重点工作</option>    
+                                    <option value="科室重点工作" <if condition="$list[$j-1]['plan_type'] eq '科室重点工作'">selected</if>>科室重点工作</option>    
                                  </select>
-                            <else />
-                            <select name="plan[{$j}][plan_type]" class="form-control">                 
-                                    <option value="科室工作" <if condition="$list[$j-1]['plan_type'] eq '科室工作'">selected</if>>科室工作</option>
-                                    <option value="项目工作" <if condition="$list[$j-1]['plan_type'] eq '项目工作'">selected</if>>项目工作</option>        
-                                 </select>
-                                 </if>
                             </td>
                             <td class=" ">
                             <select name="plan[{$j}][plan_classify]" class="form-control">
@@ -233,12 +270,7 @@
                               <textarea name="gongchengxiangmu[]" id="gongchengxiangmu[]" placeholder="" style="text-align:left;">{$list[$j-1].plan_name}</textarea>
                             </td>
                             <td class=" ">
-                             <!--  <input type="date" name="wanchengriqi[]" id="wanchengriqi[]" value="{$list[$j-1].plan_closingdate}"> -->
-
-                         <input type="text" class="data" name="wanchengriqi[]" placeholder="First Name" aria-describedby="inputSuccess2Status2" value="{$list[$j-1].plan_closingdate}">
-                               
-                        
-    
+                         <input type="text" class="data" name="wanchengriqi[]" placeholder="First Name" aria-describedby="inputSuccess2Status2" value="{$list[$j-1].plan_closingdate}">                       
                             </td>
                             <td class=" ">
                               <input type="text" name="quanzhong[]" style="width:50px;" maxlength="3" id="quanzhong[]" value="{$list[$j-1].plan_weight}">
@@ -246,32 +278,282 @@
                             <td class=" ">
                               <textarea name="gongzuoneirong[]" id="gongzuoneirong[]" placeholder="" style="width:300px; ">{$list[$j-1].plan_content}</textarea>
                             </td>
-                            <if condition="$Think.session.admin.id_level eq 3">
-                            <if condition="$Think.session.admin.user_type eq 专业员工">
-                            <td class="">
-                              <select name="plan[{$j}][plan_leader]">
-                              <option value="">{$Think.session.admin.user_leader}</option>
-                              <volist name="vse" id="vo">
-                              <option value="{$vo.vse}" <if condition="$list[$j-1]['plan_leader'] eq $vo[vse]">selected</if>>{$vo.vse}</option>
-                              </volist>
-                              </select>
+                          </tr>  
+                                         
+                        </for>
+                         <for start="11" end="14" name="j">
+                          <tr class="even pointer">
+                            <td class=" ">
+                            <input type="hidden" value="{$nljs[$j-11]['id']}" name="id[]">
+                            <select name="plan[{$j}][plan_type]" class="form-control">                 
+                                    <option value="能力建设" <if condition="$nljs[$j-11]['plan_type'] eq '能力建设'">selected</if>>能力建设</option>    
+                                 </select>
                             </td>
-                            </if>
-                            </if>
+                            <td class=" ">
+                            <select name="plan[{$j}][plan_classify]" class="form-control">
+                                    <option value="重点工作" <if condition="$nljs[$j-11]['plan_classify'] eq '重点工作'">selected</if>>重点工作</option>
+                                    <option value="常规工作" <if condition="$nljs[$j-11]['plan_classify'] eq '常规工作'">selected</if>>常规工作</option>
+                                 </select></td>
+                            <td class=" ">
+                              <textarea name="gongchengxiangmu[]" id="gongchengxiangmu[]" placeholder="" style="text-align:left;">{$nljs[$j-11].plan_name}</textarea>
+                            </td>
+                            <td class=" ">
+                         <input type="text" class="data" name="wanchengriqi[]" placeholder="First Name" aria-describedby="inputSuccess2Status2" value="{$nljs[$j-11].plan_closingdate}">                       
+                            </td>
+                            <td class=" ">
+                              <input type="text" name="quanzhong[]" style="width:50px;" maxlength="3" id="quanzhong[]" value="{$nljs[$j-11].plan_weight}">
+                            </td>
+                            <td class=" ">
+                              <textarea name="gongzuoneirong[]" id="gongzuoneirong[]" placeholder="" style="width:300px; ">{$nljs[$j-11].plan_content}</textarea>
+                            </td>
+                          </tr>  
+                                         
+                        </for>
+                         <for start="14" end="17" name="j">
+                          <tr class="even pointer">
+                            <td class=" ">
+                            <input type="hidden" value="{$tzx[$j-14]['id']}" name="id[]">
+                            <select name="plan[{$j}][plan_type]" class="form-control">                 
+                                    <option value="调整项" <if condition="$tzx[$j-14]['plan_type'] eq '调整项'">selected</if>>调整项</option>    
+                                 </select>
+                            </td>
+                            <td class=" ">
+                            <select name="plan[{$j}][plan_classify]" class="form-control">
+                                    <option value="重点工作" <if condition="$tzx[$j-14]['plan_classify'] eq '重点工作'">selected</if>>重点工作</option>
+                                    <option value="常规工作" <if condition="$tzx[$j-14]['plan_classify'] eq '常规工作'">selected</if>>常规工作</option>
+                                 </select></td>
+                            <td class=" ">
+                              <textarea name="gongchengxiangmu[]" id="gongchengxiangmu[]" placeholder="" style="text-align:left;">{$tzx[$j-14].plan_name}</textarea>
+                            </td>
+                            <td class=" ">
+                         <input type="text" class="data" name="wanchengriqi[]" placeholder="First Name" aria-describedby="inputSuccess2Status2" value="{$tzx[$j-14].plan_closingdate}">                       
+                            </td>
+                            <td class=" ">
+                              <input type="text" name="quanzhong[]" style="width:50px;" maxlength="3" id="quanzhong[]" value="{$tzx[$j-14].plan_weight}">
+                            </td>
+                            <td class=" ">
+                              <textarea name="gongzuoneirong[]" id="gongzuoneirong[]" placeholder="" style="width:300px; ">{$tzx[$j-14].plan_content}</textarea>
+                            </td>
                           </tr>  
                                          
                         </for>
                         </tbody>
                       </table>
                       <input class="btn btn-success" type="button" value="提交" onclick="fn()" style="margin-left:40%;width:10%;">
-                      </notempty>     
-                      </notempty>
+                  
+                  </notempty>
+                  </div></div>
+  </if>
+  <if condition="($Think.session.admin.id_level eq 3) or ($Think.session.admin.id_level eq 7)">
+  <div class="x_panel">
+                  <div class="x_title">
+                    <h2>上级:{$Think.session.admin.user_leader} 的计划表</h2>
+                     <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                  <empty name="list2">
+                  <table class="table">
 
+                  <h3>还没有任何计划！</h3>
 
+                  </table>
+                  </empty>
+                  <notempty name="list2">
+                    <table class="table" style="text-align:center;">
+                      <thead>
+                        <tr>
+                          <th style="text-align:center;">工作类型</th>
+                          <th style="text-align:center;">工作分类</th>
+                          <th style="text-align:center;">工作事项</th>
+                          <th style="text-align:center;">计划完成时间</th>
+                          <th style="text-align:center;">权重</th>
+                          <th style="text-align:center;">工作内容及目标/交付物</th>
+                          <!-- <th style="text-align:center;">是否延续</th> -->
+                        </tr>
+                      </thead>
+                      <tbody>
+                       <volist name="list2" id="vv">
+  
+                        <tr>
+                          <td>{$vv.plan_type}</td>
+                          <td>{$vv.plan_classify}</td>
+                          <td>{$vv.plan_name}</td>
+                          <td>{$vv.plan_closingdate}</td>
+                          <td>{$vv.plan_weight}</td>
+                          <td>{$vv.plan_content}</td>
+                          <!-- <td><if condition="$vv.if_continue eq 1">是<else/>否</if></td> -->
+                        </tr>
+                        
+                        </volist>
+                      </tbody>
+                    </table>
+                  </notempty>
+                  </div>
+                </div>
 
-</if>
-</div></div></form>            
-               <include file="Public/foot" /> 
+ <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>清单计划（时间:{$Think.session.admin.year_sys}年）</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="x_content">
+
+                    <div class="table-responsive">
+                
+                  <empty name="list2">
+                  <table class="table table-striped jambo_table bulk_action" style="text-align:center;height:590px;">
+                  <tr class="headings">
+                  <p><strong>因您上级领导暂未提交本月计划，本月计划暂无法填写，请等待。</strong></p>
+                  </tr>
+                  </table>
+                  </empty>
+                  
+            <notempty name="list2"><!-- 上级 -->
+  
+                <div class="x_content">
+
+                      <table class="table table-striped jambo_table bulk_action" style="text-align:center;height:100%;">
+                        <thead>
+                          <tr class="headings">
+                            <th class="column-title">工作类型</th>
+                            <th class="column-title">工作分类</th>
+                            <th class="column-title">工作事项</th>
+                            <th class="column-title">计划完成时间 </th>
+                            <th class="column-title">权重 </th>
+                            <th class="column-title">工作内容及目标/交付物 </th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+
+                        <for start="1" end="6" name="j">
+                          <tr class="even pointer">
+                            <td class=" ">
+                            <input type="hidden" value="{$list[$j-1]['id']}" name="id[]">
+                            <select name="plan[{$j}][plan_type]" class="form-control">                 
+                                    <option value="科室重点工作" <if condition="$list[$j-1]['plan_type'] eq '科室重点工作'">selected</if>>科室重点工作</option> 
+                                    <option value="项目重点工作" <if condition="$list[$j-1]['plan_type'] eq '项目重点工作'">selected</if>>项目重点工作</option>   
+                                 </select>
+                            </td>
+                            <td class=" ">
+                            <select name="plan[{$j}][plan_classify]" class="form-control">
+                                    <option value="重点工作" <if condition="$list[$j-1]['plan_classify'] eq '重点工作'">selected</if>>重点工作</option>
+                                    <option value="常规工作" <if condition="$list[$j-1]['plan_classify'] eq '常规工作'">selected</if>>常规工作</option>
+                                 </select></td>
+                            <td class=" ">
+                              <textarea name="gongchengxiangmu[]" id="gongchengxiangmu[]" placeholder="" style="text-align:left;">{$list[$j-1].plan_name}</textarea>
+                            </td>
+                            <td class=" ">
+                         <input type="text" class="data" name="wanchengriqi[]" placeholder="First Name" aria-describedby="inputSuccess2Status2" value="{$list[$j-1].plan_closingdate}">                       
+                            </td>
+                            <td class=" ">
+                              <input type="text" name="quanzhong[]" style="width:50px;" maxlength="3" id="quanzhong[]" value="{$list[$j-1].plan_weight}">
+                            </td>
+                            <td class=" ">
+                              <textarea name="gongzuoneirong[]" id="gongzuoneirong[]" placeholder="" style="width:300px; ">{$list[$j-1].plan_content}</textarea>
+                            </td>
+                          </tr>  
+                                         
+                        </for>
+                         <for start="6" end="8" name="j">
+                          <tr class="even pointer">
+                            <td class=" ">
+                            <input type="hidden" value="{$nljs[$j-6]['id']}" name="id[]">
+                            <select name="plan[{$j}][plan_type]" class="form-control">                 
+                                    <option value="能力建设" <if condition="$nljs[$j-6]['plan_type'] eq '能力建设'">selected</if>>能力建设</option>    
+                                 </select>
+                            </td>
+                            <td class=" ">
+                            <select name="plan[{$j}][plan_classify]" class="form-control">
+                                    <option value="重点工作" <if condition="$nljs[$j-6]['plan_classify'] eq '重点工作'">selected</if>>重点工作</option>
+                                    <option value="常规工作" <if condition="$nljs[$j-6]['plan_classify'] eq '常规工作'">selected</if>>常规工作</option>
+                                 </select></td>
+                            <td class=" ">
+                              <textarea name="gongchengxiangmu[]" id="gongchengxiangmu[]" placeholder="" style="text-align:left;">{$nljs[$j-6].plan_name}</textarea>
+                            </td>
+                            <td class=" ">
+                         <input type="text" class="data" name="wanchengriqi[]" placeholder="First Name" aria-describedby="inputSuccess2Status2" value="{$nljs[$j-6].plan_closingdate}">                       
+                            </td>
+                            <td class=" ">
+                              <input type="text" name="quanzhong[]" style="width:50px;" maxlength="3" id="quanzhong[]" value="{$nljs[$j-6].plan_weight}">
+                            </td>
+                            <td class=" ">
+                              <textarea name="gongzuoneirong[]" id="gongzuoneirong[]" placeholder="" style="width:300px; ">{$nljs[$j-6].plan_content}</textarea>
+                            </td>
+                          </tr>  
+                                         
+                        </for>
+                         <for start="8" end="11" name="j">
+                          <tr class="even pointer">
+                            <td class=" ">
+                            <input type="hidden" value="{$tzx[$j-8]['id']}" name="id[]">
+                            <select name="plan[{$j}][plan_type]" class="form-control">                 
+                                    <option value="调整项" <if condition="$tzx[$j-8]['plan_type'] eq '调整项'">selected</if>>调整项</option>    
+                                 </select>
+                            </td>
+                            <td class=" ">
+                            <select name="plan[{$j}][plan_classify]" class="form-control">
+                                    <option value="重点工作" <if condition="$tzx[$j-8]['plan_classify'] eq '重点工作'">selected</if>>重点工作</option>
+                                    <option value="常规工作" <if condition="$tzx[$j-8]['plan_classify'] eq '常规工作'">selected</if>>常规工作</option>
+                                 </select></td>
+                            <td class=" ">
+                              <textarea name="gongchengxiangmu[]" id="gongchengxiangmu[]" placeholder="" style="text-align:left;">{$tzx[$j-8].plan_name}</textarea>
+                            </td>
+                            <td class=" ">
+                         <input type="text" class="data" name="wanchengriqi[]" placeholder="First Name" aria-describedby="inputSuccess2Status2" value="{$tzx[$j-8].plan_closingdate}">                       
+                            </td>
+                            <td class=" ">
+                              <input type="text" name="quanzhong[]" style="width:50px;" maxlength="3" id="quanzhong[]" value="{$tzx[$j-8].plan_weight}">
+                            </td>
+                            <td class=" ">
+                              <textarea name="gongzuoneirong[]" id="gongzuoneirong[]" placeholder="" style="width:300px; ">{$tzx[$j-8].plan_content}</textarea>
+                            </td>
+                          </tr>  
+                                         
+                        </for>
+                        </tbody>
+                      </table>
+                      <input class="btn btn-success" type="button" value="提交" onclick="fn()" style="margin-left:40%;width:10%;">
+                  
+                  </notempty>
+                  </div></div>
+  </if>
+</notempty>
+</div>
+</div>           
+<include file="Public/foot" /> 
 
               
                      
@@ -286,7 +568,7 @@
       var zongquanzhong=0;
       //alert(zongquanzhong);
       var xx = new Array(6);
-      for(var i=1;i<=gongchengxiangmu.length;i++)
+      for(var i=1;i<=gongchengxiangmu.length-3;i++)
       {
         if(gongchengxiangmu[i-1].value!="")
             {
@@ -336,7 +618,7 @@
 </script>
 
 
- // <script>
+ <script>
  //      $(document).ready(function() {
  //        $('#single_cal1').daterangepicker({
  //          singleDatePicker: true,
@@ -363,4 +645,4 @@
  //          //console.log(start.toISOString(), end.toISOString(), label);
  //        });
  //      });
- //    </script>
+</script>

@@ -92,14 +92,14 @@
                           </ul>
                         </li>
                     </ul>
-                  </li>                 
-                  <li><a><i class="fa fa-edit"></i> 个人能力建设 <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="<?php echo U('index/index1');?>">半年总结</a></li>
-                      <li><a href="<?php echo U('index/index1');?>">半年计划</a></li>
-                      <li><a href="<?php echo U('index/index1');?>">季度沟通</a></li>
-                    </ul>
                   </li>
+                  <?php if($_SESSION['admin']['id_level']!= 3): ?><li><a><i class="fa fa-edit"></i> 绩效总评 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo U('Performance/Planconfirm');?>">月度计划确认</a></li>
+                      <li><a href="<?php echo U('index/index1');?>"></a></li>
+                      <li><a href="<?php echo U('index/index1');?>"></a></li>
+                    </ul>
+                  </li><?php endif; ?>
                   <li><a><i class="fa fa-desktop"></i> 综合查询 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?php echo U('index/index1');?>">清单查询</a></li>
@@ -296,64 +296,13 @@
 }
 </style>
 <div class="right_col" role="main">
-              <div class="row">
-              <!-- <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="x_panel">
-                  <div class="x_title">
-                    <h2>上级:<?php echo ($_SESSION['admin']['user_leader']); ?> 的计划表</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                  <?php if(empty($list2)): ?><p>还没有任何计划！</p><?php endif; ?>
-                  <?php if(!empty($list2)): ?><table class="table">
-                      <thead>
-                        <tr>
-                          <th>工作类型</th>
-                          <th>工作分类</th>
-                          <th>工作事项</th>
-                          <th>计划完成时间</th>
-                          <th>权重</th>
-                          <th>工作内容及目标/交付物</th>
-                          <th>是否延续</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                       <?php if(is_array($list2)): $i = 0; $__LIST__ = $list2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vv): $mod = ($i % 2 );++$i;?><tr>
-                          <td><?php echo ($vv["plan_type"]); ?></td>
-                          <td><?php echo ($vv["plan_classify"]); ?></td>
-                          <td><?php echo ($vv["plan_name"]); ?></td>
-                          <td><?php echo ($vv["plan_closingdate"]); ?></td>
-                          <td><?php echo ($vv["plan_weight"]); ?></td>
-                          <td><?php echo ($vv["plan_content"]); ?></td>
-                          <td><?php echo ($vv["if_continue"]); ?></td>
-                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                      </tbody>
-                    </table><?php endif; ?>
-                  </div>
-                </div>
-              </div> -->
-              
+  
 
-
+  <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>清单计划查询</h2>
+                    <h2>计划确认</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -376,91 +325,50 @@
 
                     <div class="table-responsive"  style="height:650px;">
                       <table class="table table-striped jambo_table bulk_action" style="text-align:center;">
-                        <thead>
+                       <thead>
                           <tr class="headings">
-                            <th class="column-title" style="text-align:center;">工作类别</th>
-                            <th class="column-title">工作类型</th>
+                            
+                            <th class="column-title">员工姓名</th>
                             <th class="column-title">工作事项</th>
-                            <th class="column-title">计划完成时间 </th>
-                            <th class="column-title">权重 </th>
-                            <th class="column-title">工作内容及目标/交付物 </th>
-                            <th class="column-title">自我工作总结（完成情况） </th>
-                            <th class="column-title">自评等级 </th>
-                            <!-- <th class="column-title">是否延续</th> -->
-                            <th class="column-title">评价人</th>
-                            <th class="column-title">上级评价 </th>
+                            
+                            <th class="column-title">操作 </th>
                           </tr>
                         </thead>
 
                         <tbody>
-                        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="even pointer">
-                            <td class=" ">
+                        <?php if(is_array($jh)): $i = 0; $__LIST__ = $jh;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="even pointer">
+                            <td class=" " width="200px;">
                               <label>
-                                <?php echo ($vo["plan_type"]); ?>
+                                <?php switch($_SESSION['admin']['id_level']): case "4": echo ($vo["staff_name"]); break;?>
+                                <?php case "5": echo ($vo["chief_name"]); break; endswitch;?>
                               </label>
                             </td>
-                            <td class=" ">
-                              <label>
-                                <?php echo ($vo["plan_classify"]); ?>
-                              </label>
-                            </td>
+                            
                             <td class=" ">
                               <label>
                                 <?php echo ($vo["plan_name"]); ?>
                               </label>
                             </td>
-                            <td class=" ">
-                              <label>
-                                <?php echo ($vo["plan_closingdate"]); ?>
-                              </label>
-                            </td>
-                            <td class=" ">
-                              <label>
-                                <?php echo ($vo["plan_weight"]); ?>
-                              </label>
-                            </td>
-                            <td class=" ">
-                              <label>
-                                <?php echo ($vo["plan_content"]); ?>
-                              </label>
-                            </td>
-                             <td class=" ">
-                              <label>
-                                <?php echo ($vo["plan_sum"]); ?>
-                              </label>
-                            </td>
-                            <td class=" ">
-                              <label>
-                                <?php echo ($vo["plan_self"]); ?>
-                              </label>
-                            </td>
-                            <!-- <td class=" ">
-                              <label>
-                                <?php if($vo["if_continue"] == 1): ?>是
-                                <?php else: ?>否<?php endif; ?>
-                              </label>
-                            </td> -->
-                            <td class=" ">
-                              <label>
-                                <?php echo ($vo["plan_leader"]); ?>
-                              </label>
-                            </td>
-
+                            
                             <td class=" " width="200px;">
                               <label>
-                               
+            <a href="<?php echo U('Performance/showplan',array('id'=>$vo['id']));?>">[ 查看 ]</a>
                               </label>
                             </td>
                             
                           </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                         </tbody>
                       </table>
-                      <a class="btn btn-success" href="<?php echo U('Plan/midplan');?>" style="margin-left:40%;width:10%;">返回</a>
+                     <!--  <a class="btn btn-success" href="<?php echo U('Plan/midplan');?>" style="margin-left:40%;width:10%;">返回</a> -->
                     </div>
                   </div>
                 </div>
               </div>
-                                 
+    </div>
+
+
+</div>
+     
         
       </div>
     </div>
@@ -486,7 +394,3 @@
                </script>     
   </body>
 </html>
- 
-              </div>
-
-</div>

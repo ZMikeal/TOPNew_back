@@ -59,7 +59,6 @@ class LoginController extends Controller {
         //dump(session('admin'));exit;
         $this->redirect('Plan/index');
       }
-      
     }
     else{
       // $this->error("用户名或密码不正确",3);

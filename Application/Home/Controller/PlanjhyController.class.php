@@ -318,9 +318,9 @@ class PlanjhyController extends BaseController {
 
 
       $this->model=D('info_admin');
-      $leadertj['id_level']=" 4 or 5 ";
+      //$leadertj['id_level']="in (4,5)";
       $leadertj['user_department']=session('admin.user_department');;
-      $leader=$this->model->where($leadertj)->select();
+      $leader=$this->model->where($leadertj)->where("id_level in (4,5)")->select();
       //dump($project);exit;
       $this->assign('leader',$leader);// 赋值数据集
       $this->display();

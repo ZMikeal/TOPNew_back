@@ -20,7 +20,7 @@ class PlanController extends BaseController {
 
 
     public function midplan(){
-       $le=session('admin.id_level');
+      $le=session('admin.id_level');
       $id_employee=session('admin.id_employee');
       if($le==3||$le==7)
       {
@@ -61,9 +61,9 @@ class PlanController extends BaseController {
       {
         $this->model=D('planmonth_staff');
         $tj['staff_id']=session('admin.id_employee');
-        $list = $this->model->where($tj)->select();
+        $list = $this->model->where($tj)->select();//本月正常项目
         $tj['if_improve']=1;
-        $listt = $this->model->where($tj)->select();
+        $listt = $this->model->where($tj)->select();//本月改善项
 
         if($tj['month']==1)
         {
@@ -76,9 +76,9 @@ class PlanController extends BaseController {
        
         $tj['if_continue']=1;
         $tj['if_improve']=0;
-        $list1 = $this->model->where($tj)->select();
+        $list1 = $this->model->where($tj)->select();//上月延续正常项
         $tj['if_improve']=1;
-        $listt1 = $this->model->where($tj)->select();
+        $listt1 = $this->model->where($tj)->select();//上月延续改善项
       }
       if($le==4)
       {
@@ -125,12 +125,22 @@ class PlanController extends BaseController {
         $listt1 = $this->model->where($tj)->select();
 
       }
-
-      //dump($tj);exit;
+      if($list1!=null)
+      {
+        $list=$list1;
+      }
+       if($listt1!=null)
+      {
+        $listt=$listt1;
+      }
+      //dump($list);
+      //dump($listt);
+      //dump($list1);
+      // dump($listt1);exit;
       $this->assign('list',$list);// 赋值数据集
        $this->assign('listt',$listt);
-      $this->assign('list1',$list1);
-       $this->assign('listt1',$listt1);
+      // $this->assign('list1',$list1);
+      //  $this->assign('listt1',$listt1);
       $this->model=D('info_item');
       $vse = $this->model->order('id desc')->where('if_delete=0')->select();
       $this->assign('vse',$vse);// 赋值数据集
@@ -228,7 +238,7 @@ class PlanController extends BaseController {
                   $map['plan_weight'] = $plan_weight[$k-1];
                   $map['plan_content'] = $plan_content[$k-1];
                   $map['if_continue'] = $v['if_continue'];
-                  if($map['plan_type']=="改善创新项")
+                  if($map['plan_type']=="改善创新项"||$map['plan_type']=="能力建设")
                   {
                     $map['if_improve']=1;
                   }

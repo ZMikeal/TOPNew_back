@@ -67,36 +67,46 @@ class PlanYController extends BaseController {
       {
         $this->model=D('planyear_staff');
         $tj['staff_id']=session('admin.id_employee');
+        $tj['if_improve']=0;
         $list = $this->model->where($tj)->select();
 
-        //$tj['month']=session('admin.month')-1;
-        //$tj['if_continue']=1;
-        //$list1 = $this->model->where($tj)->select();
+        $tj['if_improve']=1;
+        $nljs = $this->model->where($tj)->select();
+        
+        $tj['if_improve']=2;
+        $tzx = $this->model->where($tj)->select();
       }
       if($le==4)
       {
         $this->model=D('planyear_chief');
         $tj['chief_id']=session('admin.id_employee');
+        $tj['if_improve']=0;
         $list = $this->model->where($tj)->select();
 
-        //$tj['month']=session('admin.month')-1;
-        //$tj['if_continue']=1;
-        //$list1 = $this->model->where($tj)->select();
+        $tj['if_improve']=1;
+        $nljs = $this->model->where($tj)->select();
+        
+        $tj['if_improve']=2;
+        $tzx = $this->model->where($tj)->select();
       }
       if($le==5)
       {
         $this->model=D('planyear_minister');
         $tj['minister_id']=session('admin.id_employee');
+        $tj['if_improve']=0;
         $list = $this->model->where($tj)->select();
 
-        //$tj['month']=session('admin.month')-1;
-        //$tj['if_continue']=1;
-        //$list1 = $this->model->where($tj)->select();
+        $tj['if_improve']=1;
+        $nljs = $this->model->where($tj)->select();
+        
+        $tj['if_improve']=2;
+        $tzx = $this->model->where($tj)->select();
       }
 
       //dump($time);exit;
       $this->assign('list',$list);// 赋值数据集
       $this->assign('time',$time);
+      $this->assign('nljs',$nljs);
       //$this->assign('list1',$list1);
       $this->model=D('info_item');
       $vse = $this->model->order('id desc')->select();
@@ -188,15 +198,26 @@ class PlanYController extends BaseController {
                   $map['plan_closingdate'] = $plan_closingdate[$k-1];
                   $map['plan_weight'] = $plan_weight[$k-1];
                   $map['plan_content'] = $plan_content[$k-1];
+                  if($map['plan_type']=="能力建设")
+                  {
+                    $map['if_improve']=1;
+                  }
+                  if($map['plan_type']=="调整项")
+                  {
+                    $map['if_improve']=2;
+                  }
                   //$map['if_continue'] = $v['if_continue'];
                   
                   if($id[$k-1]==null)
                   {
                      if($map['plan_name']!="")
                      {
+                      if($map['if_improve']!=2)
+                      {
                       if($this->model->create($map)){
                             $this->model->add();
                           }
+                        }
                      }
                   }
                   if($id[$k-1]!=null)
@@ -204,9 +225,12 @@ class PlanYController extends BaseController {
                     $idd=$id[$k-1];
                     if($map['plan_name']!="")
                      {
+                      if($map['if_improve']!=2)
+                      {
                       if($this->model->create($map)){
                             $this->model->where("id=$idd")->save();
                           }
+                        }
                      }
                      if($map['plan_name']=="")
                      {

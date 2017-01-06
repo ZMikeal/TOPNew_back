@@ -92,14 +92,14 @@
                           </ul>
                         </li>
                     </ul>
-                  </li>                 
-                  <li><a><i class="fa fa-edit"></i> 个人能力建设 <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="<?php echo U('index/index1');?>">半年总结</a></li>
-                      <li><a href="<?php echo U('index/index1');?>">半年计划</a></li>
-                      <li><a href="<?php echo U('index/index1');?>">季度沟通</a></li>
-                    </ul>
                   </li>
+                  <?php if($_SESSION['admin']['id_level']!= 3): ?><li><a><i class="fa fa-edit"></i> 绩效总评 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo U('Performance/Planconfirm');?>">月度计划确认</a></li>
+                      <li><a href="<?php echo U('index/index1');?>"></a></li>
+                      <li><a href="<?php echo U('index/index1');?>"></a></li>
+                    </ul>
+                  </li><?php endif; ?>
                   <li><a><i class="fa fa-desktop"></i> 综合查询 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?php echo U('index/index1');?>">清单查询</a></li>
